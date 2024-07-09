@@ -7,7 +7,6 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
-	"planner/internal/api/spec"
 	"syscall"
 	"time"
 
@@ -15,6 +14,8 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/phenpessoa/gutils/netutils/httputils"
+	"github.com/rcmonteiro/planner-nlw/internal/api"
+	"github.com/rcmonteiro/planner-nlw/internal/api/spec"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )
@@ -60,10 +61,10 @@ func run(ctx context.Context) error {
 		return err
 	}
 
-	si := api.NewApi(pool, logger)
+	si := api.NewAPI(pool, logger)
 	r := chi.NewMux()
 	r.Use(middleware.RequestID, middleware.Recoverer, httputils.ChiLogger(logger))
-	r.Mount("/", spec.Handler(si))
+	r.Mount("/", spec.Handler(&si))
 
 	srv := &http.Server{
 		Addr:         ":8080",

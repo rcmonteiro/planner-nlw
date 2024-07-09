@@ -4,12 +4,12 @@ import (
 	"context"
 	"errors"
 	"net/http"
-	"planner/internal/api/spec"
-	"planner/internal/pgstore"
 
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
+	"github.com/rcmonteiro/planner-nlw/internal/api/spec"
+	"github.com/rcmonteiro/planner-nlw/internal/pgstore"
 	"go.uber.org/zap"
 )
 

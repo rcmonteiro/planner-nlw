@@ -1,4 +1,4 @@
-module planner
+module github.com/rcmonteiro/planner-nlw
 
 go 1.22.5
 
