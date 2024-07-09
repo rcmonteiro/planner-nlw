@@ -5,6 +5,8 @@
     "goapi",
     "jackc",
     "pgstore",
+    "pgtype",
+    "sqlc",
     "uuid"
   ]
 }

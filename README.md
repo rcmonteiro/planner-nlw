@@ -1,4 +1,4 @@
-# Commands run so far
+# History
 
 ```bash
 # Install dependencies
@@ -28,5 +28,14 @@ tern new --migrations ./internal/pgstore/migrations/ create_links_table
 tern migrate --migrations ./internal/pgstore/migrations/ --config ./internal/pgstore/migrations/tern.conf
 
 # Generate code based on the OpenAPI spec
+go generate ./...
+
+# After writing the queries, we can create the code running:
+go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
+sqlc generate -f ./internal/pgstore/sqlc.yaml
+go mod tidy 
+go get -u ./...
+
+# Add the new command to the gen.go, then run to check if it works
 go generate ./...
 ```
