@@ -1,6 +1,6 @@
 module github.com/rcmonteiro/planner-nlw
 
-go 1.22.5
+go 1.22.4
 
 require (
 	github.com/discord-gophers/goapi-gen v0.3.0

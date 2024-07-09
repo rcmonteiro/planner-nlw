@@ -11,6 +11,19 @@ services:
     volumes:
       - db:/var/lib/postgresql/data
 
+  app:
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      PLANNER_DB_NAME: ${PLANNER_DB_NAME}
+      PLANNER_DB_USER: ${PLANNER_DB_USER}
+      PLANNER_DB_PASSWORD: ${PLANNER_DB_PASSWORD}
+      PLANNER_DB_PORT: ${PLANNER_DB_PORT:-5432}
+      PLANNER_DB_HOST: ${PLANNER_DB_HOST_DOCKER:-db}
+    depends_on:
+      - db
+
 volumes:
   db:
     driver: local
