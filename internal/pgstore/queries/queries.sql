@@ -74,4 +74,3 @@ SELECT
 FROM links
 WHERE
     trip_id = $1;
-
