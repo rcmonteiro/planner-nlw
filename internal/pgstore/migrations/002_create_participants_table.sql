@@ -12,3 +12,4 @@ CREATE TABLE IF NOT EXISTS participants (
 ---- create above / drop below ----
 
 DROP TABLE IF EXISTS participants;
+

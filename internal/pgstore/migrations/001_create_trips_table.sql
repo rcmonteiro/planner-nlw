@@ -11,3 +11,4 @@ CREATE TABLE IF NOT EXISTS trips (
 ---- create above / drop below ----
 
 DROP TABLE IF EXISTS trips;
+

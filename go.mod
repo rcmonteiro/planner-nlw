@@ -1,6 +1,6 @@
-module github.com/rcmonteiro/planner-nlw
+module github.com/rocketseat-education/nlw-journey-go
 
-go 1.22.4
+go 1.22.2
 
 require (
 	github.com/discord-gophers/goapi-gen v0.3.0
@@ -12,6 +12,7 @@ require (
 	github.com/google/uuid v1.6.0
 	github.com/jackc/pgx/v5 v5.6.0
 	github.com/phenpessoa/gutils v0.0.0-20240130030144-d391b9329afd
+	github.com/wneessen/go-mail v0.4.2
 	go.uber.org/zap v1.27.0
 )
 

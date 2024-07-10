@@ -10,8 +10,9 @@ import (
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
-	"github.com/rcmonteiro/planner-nlw/internal/api/spec"
-	"github.com/rcmonteiro/planner-nlw/internal/pgstore"
+	"github.com/rocketseat-education/nlw-journey-go/internal/api/spec"
+	"github.com/rocketseat-education/nlw-journey-go/internal/pgstore"
+
 	"go.uber.org/zap"
 )
 
